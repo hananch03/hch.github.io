@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+     * {
+        margin: 0;
+    }
+
+
+
+    html {
+        font-size: 10px;
+    }
+
+    body {
+
+        background-color: rgb(96, 96, 96);
+        overflow-x: hidden;
+
+    }
+
+    #navbar {
+        display: flex;
+    }
+
+    #navbar ul {
+        font-size: 1.2rem;
+        display: flex;
+        position: absolute;
+        left: 15.9rem;
+        top: 3.7rem;
+    }
+
+    #navbar li {
+        list-style: none;
+        transform: translate(-2.5rem);
+    }
+
+    .home {
+        height: 12rem;
+        width: 5rem;
+        position: absolute;
+        top: -4rem;
+        left: 1rem;
+        background-color: rgb(0, 102, 102);
+        border-end-end-radius: 3rem;
+
+    }
+
+
+    #li1 {
+        padding: 3.8rem 0.6rem 0.6rem 0.5rem;
+    }
+
+    #li2 {
+        padding: 3.8rem 0.1rem 0px 2.5rem;
+    }
+
+    #li3 {
+        padding: 3.8rem 0.5rem 0px 1.3rem;
+    }
+
+    #li4 {
+        padding: 3.8rem 0.5rem 0rem 0.9rem;
+    }
+
+    #navbar a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #navbar a:hover {
+        color: rgb(226, 210, 118);
+    }
+
+    #logo {
+        height: 6rem;
+        width: 6rem;
+        padding: 5rem;
+    }
+
+    .colr {
+        background-color: rgb(0, 102, 102);
+        position: absolute;
+        left: 97rem;
+        top: -18rem;
+        transform: rotate(120deg);
+        width: 65rem;
+        height: 97rem;
+        z-index: 0;
+
+    }
+
+    #mid {
+        position: absolute;
+        top: 21rem;
+        left: 43rem;
+        clip-path: circle();
+        height: 37rem;
+    }
+
+
+    .navbar {
+        transform: translate(95rem);
+        padding: 5rem 0px;
+        z-index: 1;
+    }
+
+    #img1 {
+        width: 5.4rem;
+        padding-left: 0rem;
+
+    }
+
+    #img1:hover {
+        width: 5.5rem;
+    }
+
+    #img2 {
+        width: 4.8rem;
+        padding-left: 2.5rem;
+        height: 4.5rem;
+    }
+
+    #img2:hover {
+        width: 4.9rem;
+    }
+
+    #pizza {
+        text-decoration: none;
+        width: 11rem;
+        text-align: center;
+        border: 3px solid black;
+        border-radius: 2rem;
+        color: white;
+
+        position: absolute;
+        left: 83.3rem;
+        top: 37.8rem;
+
+        font-size: 2.0rem;
+    }
+
+    #pizza:hover {
+        color: black;
+        background-color: white;
+    }
+
+    #noodles {
+        text-decoration: none;
+
+        color: white;
+        width: 7rem;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 1rem;
+        position: absolute;
+        left: 79.0rem;
+        top: 25.8rem;
+        font-size: 1.1rem;
+    }
+
+    #noodles:hover {
+        color: black;
+        background-color: white;
+    }
+
+    #pasta {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        left: 82.2rem;
+        top: 31.2rem;
+        font-size: 1.1rem;
+        width: 7rem;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 1rem;
+    }
+
+    #pasta:hover {
+        color: black;
+        background-color: white;
+    }
+
+    #karahi {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        left: 82.2rem;
+        top: 46.2rem;
+        font-size: 1.1rem;
+        width: 7rem;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 1rem;
+    }
+
+    #karahi:hover {
+        color: black;
+        background-color: white;
+    }
+
+    #speggitte {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        left: 79.0rem;
+        top: 51.5rem;
+        font-size: 1.1rem;
+        width: 7rem;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 1rem;
+    }
+
+    #speggitte:hover {
+        color: black;
+        background-color: white;
+    }
+
+    #facebook {
+        padding: 0 4.0rem;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        margin-top: 33rem;
+    }
+
+    .social img {
+        width: 5.2rem;
+    }
+
+    .social img:hover {
+        width: 5.3rem;
+    }
+
+    #contact {
+        position: relative;
+    }
+    #us{
+        text-align: center;
+        color: white;
+        font-size: 3.4rem;
+        margin-top: 5.0rem;
+    }
+
+    #contact::before {
+        content: "";
+        position: absolute;
+        background: url('bg2.webp');
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+    }
+
+    #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3.4rem;
+        margin-top: 5rem;
+    }
+
+    #contact-box form {
+        width: 40%;
+    }
+
+    #contact-box label {
+        font-size: 1.3rem;
+        font-family: 'oswald';
+    }
+
+    #contact-box input,
+    #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: .9rem;
+    }
+
+    #food {
+
+        width: 100vw;
+        color: white;
+        position: absolute;
+        text-align: center;
+        font-size: 3.4rem;
+        top: 127.6rem;
+    }
+
+    .card {
+        display: flex;
+        position: absolute;
+        font-size: 1.4rem;
+        top: 134.5rem;
+        justify-content: center;
+        width: 100vw;
+        height: 49.3rem;
+    }
+
+    .card-item {
+        border: 0.2rem solid black;
+        padding: 5.0rem;
+        margin: 5.0rem;
+    }
+
+    .card-item img {
+        width: 15.0rem;
+
+    }
+
+    .order {
+        background: linear-gradient(to right, #027777, #006666);
+        width: 10rem;
+        height: 3rem;
+        padding: 0.5rem 0.1rem;
+        border: 0rem;
+        border-radius: 0.6rem;
+        cursor: pointer;
+        transition: width 0.4s;
+        margin-left: 2rem;
+    }
+
+    .order img {
+        width: 3rem;
+        display: none;
+    }
+
+    .order:hover img {
+        display: block;
+    }
+
+    .order:hover {
+        width: 12rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+    .working {
+        position: absolute;
+        top: 191.7rem;
+    }
+
+    #how {
+        position: absolute;
+        top: -4.3rem;
+        width: 100vw;
+        text-align: center;
+        color: white;
+        font-size: 3.4rem;
+    }
+
+    .container {
+        display: flex;
+        margin: 5.1rem;
+        position: absolute;
+        left: 6rem;
+    }
+
+    .box1 {
+        margin: 2.0rem;
+        padding: 2.0rem;
+        position: absolute;
+        left: -2rem;
+        background-color: rgb(0, 102, 102);
+        height: 15rem;
+        width: 31rem;
+    }
+
+    .work {
+        width: 5.0rem;
+    }
+
+    .box2 {
+        margin-left: 39.0rem;
+        margin-top: 2rem;
+        padding: 3.0rem;
+        background-color: rgb(0, 102, 102);
+        height: 13rem;
+        width: 31rem;
+    }
+
+    .box3 {
+        margin-left: 4.0rem;
+        margin-top: 2rem;
+        padding: 2.0rem;
+        background-color: rgb(0, 102, 102);
+        height: 15rem;
+        width: 31rem;
+    }
+
+    footer {
+        
+        position: absolute;
+        top: 168.6rem;
+    }
+
+    #footer {
+        display: flex;
+        position: absolute;
+        top: 52rem;
+        left: 10rem;
+    }
+
+    #footer ul {
+        font-size: 1.2rem;
+        display: flex;
+    }
+
+    #footer li {
+        list-style: none;
+        transform: translate(-2.5rem);
+    }
+
+    #l1 {
+        padding: 3.8rem .6rem .6rem .5rem;
+    }
+
+    #l2 {
+        padding: 3.8rem .1rem .0rem 2.5rem;
+    }
+
+    #l3 {
+        padding: 3.8rem .5rem .0rem 1.3rem;
+    }
+
+    #l4 {
+        padding: 3.8rem .5rem .0rem .9rem;
+    }
+
+    #footer a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .footer p {
+        color: white;
+        text-align: center;
+        background-color: rgb(0, 102, 102);
+        width: 100vw;
+        top: 63rem;
+        font-size: 1.6rem;
+        position: absolute;
+    }
+
+    .name {
+        color: white;
+        margin-left: 10.9rem;
+        margin-top: 9.6rem;
+    }
+
+    .name h1 {
+        font-size: 4.3rem;
+    }
+
+    .name p {
+        font-size: 1.3rem;
+    }
+
+
+    #footer a:hover {
+        color: rgb(226, 210, 118)
+    }
+
+    .links a {
+        color: white;
+    }
+
+
+
+    @media screen and (max-width: 1240px) {
+        .navbar {
+            transform: translate(75rem);
+        }
+
+        #bg {
+            left: 50rem;
+        }
+
+        .container {
+            left: -4rem;
+        }
+
+    }
+
+    @media screen and (max-width: 1160px) {
+        .box1 {
+            width: 23rem;
+            height: 13rem;
+        }
+
+        .box2 {
+            width: 23rem;
+            height: 11rem;
+            margin-left: 30rem;
+        }
+
+        .box3 {
+            width: 23rem;
+            height: 13rem;
+        }
+
+    }
+
+    @media screen and (max-width: 1047px) {
+        .navbar {
+            position: absolute;
+            top: 264rem;
+        }
+
+    }
+
+    @media screen and (max-width: 950px) {
+        .card-item {
+            width: 12rem;
+        }
+
+        .name {
+            margin-left: 2.9rem;
+            margin-top: 4.6rem;
+        }
+
+        .order {
+            margin-top: 2rem;
+        }
+
+        #mid {
+            left: 21rem;
+        }
+
+        #pizza {
+            left: 61.3rem;
+        }
+
+        #noodles {
+            left: 57rem;
+        }
+
+        #pasta {
+            left: 60.2rem;
+        }
+
+        #karahi {
+            left: 60.2rem;
+        }
+
+        #speggitte {
+            left: 57rem;
+        }
+
+        .colr {
+            left: 70rem;
+        }
+
+    }
+
+    @media screen and (max-width: 877px) {
+        .card-item3 {
+            display: none;
+        }
+
+        .box2 {
+            display: none;
+        }
+
+        .box3 {
+            margin-left: 50rem;
+        }
+
+        .navbar {
+            left: -23rem;
+        }
+
+        #img1 {
+            width: 4.4rem;
+        }
+
+        #img1:hover {
+            width: 4.5rem;
+        }
+
+        #img2 {
+            width: 3.8rem;
+        }
+
+        #img2:hover {
+            width: 3.9rem;
+        }
+
+        #bg {
+            width: 37rem;
+            left: 47rem;
+        }
+    }
+
+    @media screen and (max-width: 735px) {
+        #pizza {
+            visibility: collapse;
+        }
+
+        #noodles {
+            visibility: collapse;
+        }
+
+        #pasta {
+            visibility: collapse;
+        }
+
+        #karahi {
+            visibility: collapse;
+        }
+
+        #speggitte {
+            visibility: collapse;
+        }
+
+        .section {
+            margin-left: 3rem;
+        }
+
+        #bg {
+            left: 36rem;
+        }
+
+        #footer {
+            left: 2rem;
+        }
+
+
+    }
+
+    @media screen and (max-width: 799px) {
+        .box3 {
+            margin-left: 32rem;
+        }
+    }
+
+    @media screen and (max-width: 631px) {
+        .navbar {
+            left: -37rem;
+        }
+
+    }
+
+    @media screen and (max-width: 631px) {
+        .box3 {
+            margin-left: 28rem;
+        }
+    }
+
+    @media screen and (max-width: 561px) {
+        .card {
+            display: flex;
+            flex-direction: column;
+            top: 150rem;
+        }
+
+        .card-item {
+            width: 36rem;
+        }
+
+        #i1 {
+            width: 14rem;
+            position: absolute;
+            left: 20rem;
+            top: -19rem;
+        }
+
+        .card-item p {
+            top: 5rem;
+            left: 22rem;
+        }
+
+        .order {
+            margin-left: 14rem;
+        }
+
+        #p1 {
+            margin-top: 10rem;
+        }
+
+        #food {
+            top: 120.6rem;
+        }
+
+        #i2 {
+            margin-left: 9rem;
+        }
+
+        #p3 {
+            margin-left: 9rem;
+        }
+
+        .working {
+            top: 249.7rem;
+        }
+
+        .container {
+            display: grid;
+        }
+
+        .box1 {
+            width: 49rem;
+            height: 8rem;
+        }
+
+        .box3 {
+            margin-left: 0rem;
+            margin-top: 15rem;
+            width: 49rem;
+            height: 8rem;
+        }
+
+        footer {
+            top: 213.6rem;
+        }
+
+        .navbar {
+            top: 263rem;
+        }
+    }
+
+    @media screen and (max-width: 497px) {
+        .card-item {
+            width: 29rem;
+        }
+    }
+
+    @media screen and (max-width: 447px) {
+        .card-item {
+            width: 25rem;
+        }
+
+        #i1 {
+            left: 10rem;
+        }
+
+        #i2 {
+            left: 10rem;
+        }
+
+        .order {
+            margin-left: 0rem;
+        }
+    }
+
+    @media screen and (max-width: 427px) {
+        #logo {
+            height: 4rem;
+            width: 4rem;
+            padding: 2rem;
+        }
+
+        #ul1 {
+            margin-left: -9rem;
+            margin-top: -4rem;
+        }
+
+        #mid {
+            top: 12rem;
+        }
+
+        #about {
+            top: 72.4rem;
+        }
+
+        #bg {
+            display: none;
+        }
+
+        #find {
+            top: 128.7rem;
+            left: 11.1rem;
+        }
+
+        #i2 {
+            margin-left: 0rem;
+        }
+
+        #p3 {
+            margin-left: 0rem;
+        }
+
+        #footer {
+            left: 0;
+        }
+
+        .navbar {
+            left: -45rem;
+            top: 263rem;
+        }
+
+        #img2 {
+            display: none;
+        }
+
+    }
+
+    @media screen and (max-width: 357px) {
+        .card-item {
+            width: 13rem;
+
+        }
+
+        #logo {
+            display: none;
+        }
+
+        #food {
+            top: 112.6rem;
+        }
+
+        #how {
+            top: -0.3rem;
+        }
+
+        #ul1 {
+            margin-left: -16.1rem;
+            margin-top: -2rem;
+        }
+
+        .name {
+            margin-left: 2.9rem;
+            margin-top: 13.6rem;
+        }
+        .name h1{
+            font-size: 3.3rem;
+        }
+
+        .navbar {
+            left: -73rem;
+            top: 263rem;
+        }
+
+        #img1 {
+            width: 2.5rem;
+        }
+
+        .social img {
+            width: 3.2rem;
+        }
+
+        #li1 {
+            font-size: 0.9rem;
+            padding: 2.8rem 0.6rem 0.6rem 0.5rem;
+        }
+
+        #li2 {
+            font-size: 0.9rem;
+            padding: 2.8rem 0.0rem 1px 1.4rem;
+        }
+
+        #li3 {
+            font-size: 0.9rem;
+            padding: 2.8rem 0.5rem 0px 1.5rem;
+        }
+
+        #li4 {
+            font-size: 0.9rem;
+            padding: 2.8rem 0.5rem 0rem 0.9rem;
+        }
+
+        #about {
+            top: 61.4rem;
+        }
+
+        #find {
+            top: 118.7rem;
+            left: 6.1rem;
+        }
+
+        #mid {
+            left: 14rem;
+        }
+
+        .card-item {
+            margin: 2rem;
+            width: 11rem;
+        }
+
+        #i1 {
+            left: 7rem;
+            top: -21rem;
+        }
+        .working{
+            top: 229.7rem;
+        }
+        footer{
+            top: 210.7rem;
+        }
+
+        #footer ul {
+            font-size: 0.9rem;
+        }
+
+        #l2 {
+            padding: 3.8rem .1rem .0rem 0.5rem;
+        }
+
+        #l3 {
+            padding: 3.8rem .5rem .0rem 0.9rem;
+        }
+
+        #l4 {
+            padding: 3.8rem .5rem .0rem 0.6rem;
+        }
+    }
+   
+  
+   
+   
+</style>
+
+<body>
+    <header>
+        <nav id="navbar">
+           <a href="/home.html"> <img id="logo" src="restaurant.png" alt=""></a>
+            <ul id="ul1" >
+                <div class="home">
+
+                </div>
+                <li id="li1"><a href="/home.html">HOME</a></li>
+                <li id="li2"><a href="/food.html">FOODS</a></li>
+                <li id="li3"><a href="/contact.html">CONTACT</a></li>
+                <li id="li4"><a href="/about.html">ABOUT</a></li>
+            </ul>
+
+            <span class="navbar">
+
+                <a href="/signin.html"><img id="img1"  src="sign-up.png" alt=""></a>
+                <a href="/food.html"><img id="img2" src="bag.png" alt=""></a>
+            </span>
+        </nav>
+    </header>
+    <div class="colr">
+
+    </div>
+    <div class="links">
+        <img src="images (3).jpg" id="mid" alt="">
+        <a id="pizza" href="#">Pizza</a>
+        <a id="noodles" href="#">Noodles</a>
+        <a id="pasta" href="#">Pasta</a>
+        <a id="karahi" href="#">Karahi</a>
+        <a id="speggitte" href="#">Speggitte</a>
+    </div>
+    <div class="name">
+        <h1>HCH</h1>
+        <P>Lorem ipsum dolor sit amet.</P>
+    </div>
+
+
+    <div class="social">
+        <a href="#"><img src="twitter (1).png" alt=""></a>
+        <a href="#"><img id="facebook" src="facebook (1).png" alt=""></a>
+        <a href="#"><img src="instagram (1).png" alt=""></a>
+
+    </div>
+    <br>
+    <hr>
+    <section id="contact">
+        <h1 id="us" class="h-primary centre">Contact Us </h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label style="color: white;" for="name">Name :</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label  style="color: white;"for="email">Email :</label>
+                    <input type="email" name="name" id="name" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="phone">Phone Number :</label>
+                    <input type="phone" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label style="color: white;" for="message">Message :</label>
+                    <textarea name="message" placeholder="Enter Your Message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+   
+    <div class="food">
+        <h1 id="food">Foods</h1>
+        <div class="card">
+            <div class="card-item">
+                <img id="i1" src="download (2).jpg" alt="">
+                <br>
+                <p id="p1">Boiled Rice &nbsp;&nbsp; &nbsp;&nbsp; $10.00 </p>
+                <br>
+                <br>
+                <p id="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, consequuntur.</p>
+                <br>
+                <br>
+                <br>
+                <button type="button" class="order">Order Now <img src="right-arrow.png" id="arrow" alt=""></button>
+            </div>
+            <div class="card-item">
+                <img id="i2" src="download (2).jpg" alt="">
+                <br>
+                <p id="p3">Boiled Rice &nbsp;&nbsp; &nbsp;&nbsp; $10.00 </p>
+                <br>
+                <br>
+                <p id="p4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, consequuntur.</p>
+                <br>
+                <br>
+                <br>
+                <button type="button" class="order">Order Now <img src="right-arrow.png" id="arrow" alt=""></button>
+            </div>
+            <div class="card-item card-item3">
+                <img src="download (2).jpg" alt="">
+                <br>
+                <p>Boiled Rice &nbsp;&nbsp; &nbsp;&nbsp; $10.00 </p>
+                <br>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, consequuntur.</p>
+                <br>
+                <br>
+                <br>
+                <button type="button" class="order">Order Now <img src="right-arrow.png" id="arrow" alt=""></button>
+            </div>
+        </div>
+    </div>
+   
+    <div  class="working">
+        <h1 id="how">How to Order</h1>
+        <div  class="container">
+            <div  class="box1">
+                <img class="work" src="cargo.png" alt="">
+                <h4>You Order from Menu</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="box2">
+                <img class="work" src="iftar.png" alt="">
+                <h4>We Make Your Meal </h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div  class="box3">
+                <img class="work" src="fast-delivery.png" alt="">
+                <h4>We Deliver</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <div id="footer">
+
+            <ul>
+                <li id="l1" ><a href="/home.html">HOME</a></li>
+                <li id="l2"><a href="/food.html">FOODS</a></li>
+                <li id="l3"><a href="/contact.html">CONTACT</a></li>
+                <li id="l4"><a href="/about.html">ABOUT</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p> Copyright </p>
+
+        </div>
+    </footer>
+
+</body>
+
+
+</html>
